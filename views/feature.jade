@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  header
+      h1=title
+  form(action='/add', method='post')
+    section.container
+        .form-group
+          .col-md-2
+            label.col-sm-2.control-label(for='feature') Feature
+          .col-md-6
+            input#feature.form-control(type='text', name='feature', placeholder='Device Feature Example: WiFi', required, value='', length='200', size='80')
+        .form-button
+          .col-m-4
+            button#add(name='add', type="submit") Add
